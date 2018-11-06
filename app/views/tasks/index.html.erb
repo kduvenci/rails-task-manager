@@ -1,0 +1,16 @@
+<br><br><br>
+<div class="container">
+  <h1>My Tasks</h1>
+  <div class="list-group">
+    <br>
+    <% @tasks.each do |task| %>
+      
+      <input type="checkbox" name="task" <%= task.completed ? "checked" : "" %>>
+      <%= link_to task.title, show_task_path(task) %>
+      <%= link_to "", delete_task_path(task), method: :delete, :class =>"fas fa-trash-alt", data: { confirm: "Remove task?" } %>
+      <br><br>
+    <% end %>
+
+  </div>
+  <a href=<%= new_task_path %> class="btn btn-success">New Task</a>
+</div>

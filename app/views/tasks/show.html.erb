@@ -1,0 +1,19 @@
+<br><br><br>
+<div class="container">
+
+  <div class="jumbotron">
+    <h1 class="display-4"><%= @task.title %></h1>
+    <p class="lead"><%= @task.details %></p>
+    <hr class="my-4">
+    <p><input type="checkbox" name="task" <%= @task.completed ? "checked" : "" %>>
+    <%= @task.completed ? "This task is completed." : "This task is not completed yet." %></p>
+    <a href="/" class="btn btn-primary">Back</a>
+    <a href=<%= edit_task_path(@task) %> class="btn btn-primary">Edit Task</a>
+  </div>
+
+
+  <h3></h3>
+  
+</div>
+
+

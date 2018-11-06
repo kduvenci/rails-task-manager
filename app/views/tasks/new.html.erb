@@ -1,0 +1,18 @@
+<br><br><br>
+<div class="container">
+  <h1>Ceate new task</h1>
+  <form action="/new" method="post">
+    <div class="form-group">
+      <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+      <label for="title">Title:</label>
+      <input type="text" class="form-control" name="task[title]" placeholder="Write your task title.">
+      <small id="titleHelp" class="form-text text-muted">Don't forget to write your task title.</small>
+    </div>
+    <div class="form-group">
+      <label for="details">Details:</label>
+      <input type="text" class="form-control" name="task[details]" placeholder="Write your taks details.">
+    </div>
+    <a href="/" class="btn btn-primary">Back</a>
+    <button type="submit" class="btn btn-success">Save</button>
+  </form>
+</div>
